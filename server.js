@@ -9,6 +9,8 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 // connecting MongoDB
+const { connectDB } = require('./db/dbConnect');
+connectDB();
 
 // middleware
 app.use(cors());
